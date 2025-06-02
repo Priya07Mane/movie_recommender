@@ -8,7 +8,12 @@ from functools import lru_cache
 import os
 import json
 
-TMDB_API_KEY = "5bf323a67be44067a3d3232aa2f9dd5c"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+
 
 DEFAULT_POSTER = "https://via.placeholder.com/150x225?text=No+Poster"
 
